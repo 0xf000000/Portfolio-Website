@@ -1,6 +1,7 @@
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 import * as THREE from "three"
 import Experience from "./Experience";
+import Room from "./World/Room";
 
 export default class Camera{
     constructor(){
@@ -17,7 +18,7 @@ export default class Camera{
     setOrbitControls(){
         this.controls = new OrbitControls(this.PerspectiveCamera, this.canvas);
         this.controls.enableDamping =true;
-        this.controls.enableZoom = false;
+        this.controls.enableZoom = true;
     }
 
     createPerspectiveCamera(){
@@ -39,29 +40,30 @@ export default class Camera{
             (this.sizes.aspect * this.sizes.frustrum)/2,
             this.sizes.frustrum/2,
             -this.sizes.frustrum/2,
-            50,
-            -50
+            -50,
+            50
         );
 
-        this.OrthographicCamera.position.y = 4;
-        this.OrthographicCamera.position.z = -5;
-        this.OrthographicCamera.rotation.x =   Math.PI / 6;
+        this.OrthographicCamera.position.y = 3;
+        this.OrthographicCamera.position.z = 4;
+    
+        this.OrthographicCamera.rotation.x = -Math.PI / 5.5;
 
-       
+     
 
 
         this.scene.add(this.OrthographicCamera);
 
-        //this.helper = new THREE.CameraHelper(this.OrthographicCamera);
-       // this.scene.add(this.helper);
+        this.helper = new THREE.CameraHelper(this.OrthographicCamera);
+        this.scene.add(this.helper);
 
         this.scene.add(this.PerspectiveCamera)
 
-        const size = 20;
-        const divisions = 20;
+        //const size = 20;
+        //const divisions = 20;
 
        // const gridHelper = new THREE.GridHelper(size,divisions);
-       // this.scene.add(gridHelper);
+        //this.scene.add(gridHelper);
 
         const axesHelper = new THREE.AxesHelper(10);
         this.scene.add(axesHelper);
@@ -83,12 +85,12 @@ export default class Camera{
     update(){
             this.controls.update();
 
-         // this.helper.matrixWorldNeedsUpdate = true;
-         //this.helper.update();
+          this.helper.matrixWorldNeedsUpdate = true;
+         this.helper.update();
 
 
-         //  this.helper.position.copy(this.OrthographicCamera.position);
-           // this.helper.rotation.copy(this.OrthographicCamera.rotation);
+          this.helper.position.copy(this.OrthographicCamera.position);
+            this.helper.rotation.copy(this.OrthographicCamera.rotation);
             
 
     }

@@ -9,7 +9,7 @@ export default class Renderer{
         this.canvas = this.experience.canvas;
         this.camera = this.experience.camera;
       
-            console.log(this.camera, this.camera.PerspectiveCamera);
+            console.log(this.camera, this.camera.OrthographicCamera);
         this.setRenderer();
     }
     setRenderer(){
@@ -33,7 +33,7 @@ export default class Renderer{
    }
 
    update(){
-    //this.renderer.setViewport(0,0,this.sizes.width,this.sizes.height);
+    this.renderer.setViewport(0,0,this.sizes.width,this.sizes.height);
     this.renderer.render(this.scene, this.camera.OrthographicCamera);
 
     // split screen

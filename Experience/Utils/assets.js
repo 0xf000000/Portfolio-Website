@@ -3,7 +3,7 @@ export default [
     {
         name :"room",
         type: "glbModel",
-        path: "/models/FinalRoom.glb"
+        path: "/models/PortfolioHouseVersion0.2.glb"
     },
     {
         name :"screen",
