@@ -20,7 +20,7 @@ this.sunLight.shadow.normalBias = 0.05;
 
 
 
-this.sunLight.position.set(2.5,7,-3)
+this.sunLight.position.set(-2.5,7,3)
 
 //const helper = new THREE.DirectionalLightHelper(this.sunLight.shadow.camera);
 
