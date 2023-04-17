@@ -5,6 +5,8 @@ import Time from './Utils/Time';
 import Resources from './Utils/Resources';
 
 import Camera  from './Camera';
+import Theme  from './Theme';
+
 import Renderer from './Renderer';
 
 import World from './World/World';
@@ -24,7 +26,7 @@ export default class Experience{
         this.sizes = new Sizes();
         this.camera = new Camera();
         this.Renderer = new Renderer();
-
+        this.theme = new Theme();
         this.resources = new Resources(assets);
 
         this.world = new World();

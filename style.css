@@ -50,6 +50,63 @@ height:100%
   position: relative;
 }
 
+.page-wrapper{
+  position: relative;
+}
+
+.toggle-bar{
+  position: fixed; 
+  display:flex;
+  flex-direction: center;
+  align-items: center;
+  top:48px;
+  right:48px; 
+  z-index: 999999999;
+}
+
+.sun-wrapper,.moon-wrapper{
+
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-button{
+cursor:pointer;
+position: relative;
+width: 56px;
+height: 28px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color:var(--pimary-pink);
+border-radius: 999px; 
+margin: 0px 16px; 
+border: none; 
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.toggle-circle{
+  position:absolute;
+  left: 6px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-button:hover .toggle-circle{
+ transform: scale(0.9);
+
+}
+
+
+.slide{
+  left: 28px;
+}
+
 /* Section Formatting Section ---------------------------------------------------- */ 
 .section-margin{
   height: 3000px;
@@ -116,8 +173,36 @@ position:absolute;
 display:block;
 width: 100%;
 max-width: 278px;
+height: 60px;
+border: 1px solid var(--pimary-pink);
+transform-origin: left;
+transform: skewY(-25deg);
 }
 
+.styleOne{
+  top: 0px;
+}
+
+
+.styleTwo{
+  top:80px;
+}
+
+.styleThree{
+  top:80px;
+  transform: skewY(25deg);
+  background-color: var(--pimary-pink);
+}
+
+
+.section-number{
+
+  position:absolute;
+  bottom:15px;
+  right:0;
+  color:var(--pimary-pink);
+  font-size: 24px;
+}
 
 
 /* Hero Section ---------------------------------------------------- */ 
