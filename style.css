@@ -12,12 +12,49 @@ html, body{
   color:var(--text-black)
 }
 
+h1,
+h3,
+section,
+p,
+span,
+svg{transition: background-color 0.5s, color 0.5s;}
+
 
 :root{
-  --text-black: rgb(34, 32, 32);
-  --primary-color: #faf4e5;
-  --pimary-pink: #e5a1aa;
+ 
+ 
+  
+
+  /*  Light Theme Variables*/ 
+  --color-text-light:  rgb(34, 32, 32);
+  --color_background-light:  #faf4e5;
+  --color-pink-light:  #e5a1aa;
+  --color-green-light: #7AD0AC;
+  --color-blue-light: #8395CD;
+
+  /*Color Dark Theme*/
+  --color-text-dark: #faf4e5;
+  --color-background-dark:  #8395CD;
+
+
 }
+
+.light-theme{
+ --color-text: var(--color-text-light);
+ --color-background: var(--color_background-light);
+ --color-pink: var(--color-pink-light);
+ --color-green: var(--color-green-light);
+ --color-blue: var(--color-blue-light);
+}
+
+.dark-theme{
+  --color-text: var(--color-text-dark);
+  --color-background: var(--color-background-dark);
+  --color-pink: var(--color-text-dark);
+  --color-green: var(--color-text-dark);
+  --color-blue: var(--color-text-dark);
+}
+
 
 
 
@@ -70,6 +107,7 @@ height:100%
   flex-direction:row;
   justify-content: center;
   align-items: center;
+  color: var(--color-text);
 }
 
 .toggle-button{
@@ -80,7 +118,7 @@ height: 28px;
 display: flex;
 justify-content: center;
 align-items: center;
-background-color:var(--pimary-pink);
+background-color:var(--color-pink);
 border-radius: 999px; 
 margin: 0px 16px; 
 border: none; 
@@ -93,7 +131,7 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  background-color: var(--primary-color);
+  background-color:var(--color-background);
   transition: all 0.2s ease-in-out;
 }
 
@@ -117,7 +155,7 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   width: 50%;
   padding:1000px 4%;
   margin:0;
-  background-color: var(--primary-color) ;
+  background-color:var(--color-background) ;
 
 }
 
@@ -132,7 +170,7 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 .section-intro-wrapper{
   position:relative;
   padding:20% 5%;
-  border-bottom: 2px solid var(--pimary-pink);
+  border-bottom: 2px solid var(--color-pink);
   padding-bottom: 400px;
 }
 
@@ -147,12 +185,21 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   line-height: 1.8;
   margin-top: 64px;
   font-size:16px;
+  color: var(--color-text);
+}
+
+.section-text{
+
+  line-height: 2;
+  margin-top: 18px;
+  font-size: 16px;
+  color: var(--color-text);
 }
 
 /* fanxy Decoration Section ------------------------------------------------*/
 .section-title{
   position:relative;
-  color:var(--pimary-pink);
+  color:var(--color-pink);
 }
 
 .section-title-text{
@@ -163,7 +210,7 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transform: skewY(25deg);
   z-index: 5;
   text-transform: uppercase;
-
+  color: var(--color-pink);
 }
 
 .styleOne,
@@ -174,7 +221,7 @@ display:block;
 width: 100%;
 max-width: 278px;
 height: 60px;
-border: 1px solid var(--pimary-pink);
+border: 1px solid var(--color-pink);
 transform-origin: left;
 transform: skewY(-25deg);
 }
@@ -191,7 +238,7 @@ transform: skewY(-25deg);
 .styleThree{
   top:80px;
   transform: skewY(25deg);
-  background-color: var(--pimary-pink);
+  background-color: var(--color-pink);
 }
 
 
@@ -200,7 +247,7 @@ transform: skewY(-25deg);
   position:absolute;
   bottom:15px;
   right:0;
-  color:var(--pimary-pink);
+  color:var(--color-pink);
   font-size: 24px;
 }
 
@@ -231,18 +278,53 @@ transform: skewY(-25deg);
   position: absolute;
   top: calc(50% - 120px);
   right:0; 
+  color: var(--color-text);
 }
 
 .hero-main-title{
   font-size: 55px;
+  color: var(--color-text);
 }
 
 .hero-main-description{
   font-size: 18px;
+  color: var(--color-text);
 }
 
 .hero-second-sub{
   font-size:32px;
   text-transform:uppercase;
+  color: var(--color-text);
 }
+
+/* Other colors Override*/
+.blue-text{
+  color: var(--color-blue);
+}
+
+.blue-border{
+  border-color: var(--color-blue);
+
+}
+
+.blue-background{
+  background-color: var(--color-blue);
+}
+
+.green-text{
+  color: var(--color-green);
+}
+
+.green-border{
+  border-color: var(--color-green);
+
+}
+
+.green-background{
+  background-color: var(--color-green);
+}
+
+
+
+/* Media Queries*/
 

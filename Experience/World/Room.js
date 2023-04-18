@@ -82,14 +82,16 @@ export default class Room{
         } );
         
 
-        const width = 1;
-        const height = 1; 
-        const intensity = 1;
+        const width = 0.5;
+        const height = 0.7; 
+        const intensity = 0.3;
         const rectLight = new THREE.RectAreaLight(0xffffff, intensity, width,height);
-        rectLight.position.set(3 ,0,0);
+        rectLight.position.set(4.62389 ,4.5,0.9);
+        rectLight.rotation.x = -Math.PI / 2;
+        rectLight.rotation.z = Math.PI / 4; 
        this.actualRoom.add(rectLight);
 
-        const rectlightHelper = new RectAreaLightHelper(rectLight);
+       // const rectlightHelper = new RectAreaLightHelper(rectLight);
         this.actualRoom.add(rectLight);
 
 

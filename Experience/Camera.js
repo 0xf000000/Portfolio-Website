@@ -51,7 +51,7 @@ export default class Camera{
 
      this.OrthographicCamera.zoom = 2;
 
-            this.OrthographicCamera.updateProjectionMatrix();
+        this.OrthographicCamera.updateProjectionMatrix();
         this.scene.add(this.OrthographicCamera);
 
       // this.helper = new THREE.CameraHelper(this.OrthographicCamera);
