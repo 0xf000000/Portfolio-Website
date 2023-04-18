@@ -1,7 +1,7 @@
 import * as THREE from "three"
 import Experience from "../Experience";
 import GSAP from "gsap";
-
+import { RectAreaLightHelper } from "three/examples/jsm/helpers/RectAreaLightHelper";
 export default class Room{
     constructor(){
         this.experience = new Experience();
@@ -82,13 +82,23 @@ export default class Room{
         } );
         
 
+        const width = 1;
+        const height = 1; 
+        const intensity = 1;
+        const rectLight = new THREE.RectAreaLight(0xffffff, intensity, width,height);
+        rectLight.position.set(3 ,0,0);
+       this.actualRoom.add(rectLight);
 
-        
+        const rectlightHelper = new RectAreaLightHelper(rectLight);
+        this.actualRoom.add(rectLight);
+
 
         this.scene.add(this.actualRoom);
         this.actualRoom.scale.set(0.11,0.11,0.11);
         
     }
+
+   
    
 
    rezize(){

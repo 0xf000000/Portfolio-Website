@@ -75,10 +75,10 @@ switchTheme(theme)
       });
 
       GSAP.to(this.sunLight, {
-         intensity: 0.78,
+         intensity: 0.17,
       });
       GSAP.to(this.ambientLight, {
-         intensity: 0.78,
+         intensity: 0.17,
       });
    }else{
       GSAP.to(this.sunLight.color,{
@@ -94,10 +94,10 @@ switchTheme(theme)
       });
 
       GSAP.to(this.sunLight, {
-         intensity: 0.78,
+         intensity: 1,
       });
       GSAP.to(this.ambientLight, {
-         intensity: 0.78,
+         intensity: 1,
       });
    }
 }
