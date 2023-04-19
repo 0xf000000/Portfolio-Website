@@ -328,3 +328,10 @@ transform: skewY(-25deg);
 
 /* Media Queries*/
 
+@media (max-width: 968px){
+
+  .section{
+    width: 100%;
+  }
+
+}
